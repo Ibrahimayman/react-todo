@@ -6,8 +6,8 @@ var AddTodo = React.createClass({
         var todoText = this.refs.todoText.value;
 
         if (todoText.length > 0) {
-            alert(this.refs.todoText.value);
             this.refs.todoText.value = '';
+            this.props.onAddTodo(todoText); // this a method written in the parent.
         } else {
             this.refs.todoText.focus();
         }
@@ -16,7 +16,7 @@ var AddTodo = React.createClass({
         return (
             <div>
                 <input type="text" ref="todoText" placeholder="What do you need to do?"/>
-                <input type="button" value="add new" className="button" onClick={this.handleSubmit} />
+                <input type="button" value="add new" className="button" onClick={this.handleSubmit}/>
             </div>
         );
     }
