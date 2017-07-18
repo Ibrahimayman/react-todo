@@ -11,9 +11,12 @@
   "license": "MIT",
   "dependencies": {
     "axios": "^0.9.1",
+    "bootstrap": "^3.3.7",
     "express": "^4.15.3",
+    "moment": "^2.18.1",
     "react": "^0.14.9",
     "react-addons-test-utils": "^0.14.8",
+    "react-bootstrap": "^0.31.1",
     "react-dom": "^0.14.9",
     "react-router": "^2.8.1"
   },

@@ -1,4 +1,8 @@
-var React = require("react");
+/**
+ * Created by Ibrahim Ayman on 17/07/2017.
+ */
+
+var React = require('react');
 
 var AddTodo = React.createClass({
     handleSubmit: function (e) {
@@ -7,16 +11,18 @@ var AddTodo = React.createClass({
 
         if (todoText.length > 0) {
             this.refs.todoText.value = '';
-            this.props.onAddTodo(todoText); // this a method written in the parent.
+            this.props.onAddTodo(todoText);
         } else {
             this.refs.todoText.focus();
         }
     },
     render: function () {
         return (
-            <div>
-                <input type="text" ref="todoText" placeholder="What do you need to do?"/>
-                <input type="button" value="add new" className="button" onClick={this.handleSubmit}/>
+            <div className="container__footer">
+                <form onSubmit={this.handleSubmit}>
+                    <input type="text" ref="todoText" placeholder="What do you need to do?"/>
+                    <button className="button expanded">Add Todo</button>
+                </form>
             </div>
         );
     }
